@@ -1,0 +1,10 @@
+<div>Hello {{userName}}</div>
+<br>
+<div *ngIf="hasExpirience(); else noExpirience">
+  <div *ngFor="let expirience of userExpirience">
+    Worked as: {{ expirience.title }}, From {{ expirience.start_date }} To {{ expirience.end_date }}
+  </div>
+</div>
+<br>
+<ng-template #noExpirience>No expirience</ng-template>
+

@@ -1,0 +1,8 @@
+<div *ngIf="hasUsers(); else loadingUsers">
+  <div *ngFor="let user of users">
+    <app-user [user]="user"></app-user>
+  </div>
+</div>
+<ng-template #loadingUsers>
+  <div>Fetching users...</div>
+</ng-template>
